@@ -2,3 +2,5 @@
 # . "$(dirname "$0")/_/husky.sh"
 
 # npx --no-install commitlint --edit $1
+
+# 注释了最后两行，要不然GitHub-desktop提交不了
