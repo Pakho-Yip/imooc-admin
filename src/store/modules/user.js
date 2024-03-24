@@ -13,8 +13,8 @@ export default {
       const { username, password } = userInfo
       return new Promise((resolve, reject) => {
         login({
-          username,
-          password: md5(password)
+          loginName: username,
+          password: md5(username + password)
         })
           .then((data) => {
             resolve()

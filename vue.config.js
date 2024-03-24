@@ -9,8 +9,9 @@ module.exports = {
     proxy: {
       // 当地址中包含 /api 的时候，触发此代理
       '/api': {
-        target: 'https://api.imooc-admin.lgdsunday.club/',
-        changeOrigin: true
+        target: 'https://testb-tms-manage.tcsczy.com/tcsc-tctms-facade-pc/',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
       }
     }
   },
