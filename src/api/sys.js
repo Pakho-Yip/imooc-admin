@@ -10,3 +10,16 @@ export const login = (data) => {
     data
   })
 }
+
+/**
+ *  获取用户信息
+ *  return promise
+ */
+export const getUserInfo = (data) => {
+  console.log('执行', data)
+  return request({
+    url: '/account/info',
+    method: 'POST',
+    data
+  })
+}

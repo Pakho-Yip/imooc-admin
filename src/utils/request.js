@@ -1,18 +1,35 @@
 import axios from 'axios'
+import store from '@/store'
 import { ElMessage } from 'element-plus'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   headers: {
-    TerminalModule: 'TCTMS_MANAGE'
+    // TerminalModule: 'TCTMS_MANAGE'
+    TerminalModule: 'WMS_SAAS'
   },
   timeout: 5000
 })
 
+// 请求拦截器
+service.interceptors.response.use(
+  (config) => {
+    console.log('请求拦截器')
+    // 在这里统一注入 token
+    if (store.getters.token) {
+      config.headers.Authorization = `Bearer ${store.getters.token}`
+    }
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
 // 响应拦截器
 service.interceptors.response.use(
   // 请求成功
   (response) => {
+    console.log('响应拦截器')
     console.log(response)
     const { success, message, result } = response.data
     // 需要判断当前请求是否成功

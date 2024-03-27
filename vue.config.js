@@ -9,7 +9,8 @@ module.exports = {
     proxy: {
       // 当地址中包含 /api 的时候，触发此代理
       '/api': {
-        target: 'https://testb-tms-manage.tcsczy.com/tcsc-tctms-facade-pc/',
+        // target: 'https://testb-tms-manage.tcsczy.com/tcsc-tctms-facade-pc/',
+        target: 'https://testb-wmsv2.tcsczy.com/tcsc-wms-facade/',
         changeOrigin: true,
         pathRewrite: { '^/api': '' }
       }
