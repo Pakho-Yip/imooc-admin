@@ -1,5 +1,5 @@
 <template>
-  <div class="">11</div>
+  <div class="">Sidebar</div>
 </template>
 
 <script setup></script>
