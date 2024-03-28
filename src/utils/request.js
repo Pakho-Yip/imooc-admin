@@ -44,6 +44,9 @@ service.interceptors.response.use(
       return result
     } else {
       // 失败（请求成功，业务失败），消息提示
+      if (response.data.errorCode === '#401') {
+        store.dispatch('user/logout')
+      }
       ElMessage.error(message)
       return Promise.reject(new Error(message))
     }
