@@ -3,9 +3,9 @@
     :collapse="!$store.getters.sidebarOpened"
     :default-active="activeMenu"
     :uniqueOpened="true"
-    background-color="$store.getters.cssVar.menuBg"
-    text-color="$store.getters.cssVar.menuText"
-    active-text-color="$store.getters.cssVar.menuActiveText"
+    :background-color="$store.getters.cssVar.menuBg"
+    :text-color="$store.getters.cssVar.menuText"
+    :active-text-color="$store.getters.cssVar.menuActiveText"
     router
   >
     <sidebar-item
