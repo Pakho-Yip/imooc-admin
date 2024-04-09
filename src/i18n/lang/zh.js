@@ -146,6 +146,36 @@ export default {
     desc: '描述',
     action: '操作',
     assignPermissions: '分配权限',
-    removeRole: '删除角色'
+    removeRole: '删除角色',
+    dialogTitle: '新增角色',
+    dialogRole: '角色名称',
+    dialogDesc: '角色描述',
+    updateRoleSuccess: '用户角色更新成功'
+  },
+  permission: {
+    name: '权限名称',
+    mark: '权限标识',
+    desc: '权限描述'
+  },
+  article: {
+    ranking: '排名',
+    title: '标题',
+    author: '作者',
+    publicDate: '发布时间',
+    desc: '内容简介',
+    action: '操作',
+    dynamicTitle: '动态展示',
+    show: '查看',
+    remove: '删除',
+    edit: '编辑',
+    dialogTitle1: '确定要删除文章 ',
+    dialogTitle2: ' 吗？',
+    removeSuccess: '文章删除成功',
+    titlePlaceholder: '请输入文章标题',
+    markdown: 'markdown',
+    richText: '富文本',
+    commit: '提交',
+    createSuccess: '文章创建成功',
+    editorSuccess: '文章修改成功'
   }
 }
